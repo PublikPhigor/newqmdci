@@ -271,7 +271,7 @@ a {
             width: 100%;
             top: 65px;
             left: 0;
-            z-index: 999;
+            z-index: 999999;
             background: #FAFAFA;
             box-shadow: inset 2px 0px 2px 2px #e8e8e8;
             box-sizing: border-box;
@@ -480,11 +480,11 @@ a {
 
     /* Our vision */
     .vsn-card {
-        height: 250px;
+        height: 150px;
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 10px;
         box-sizing: border-box;
         overflow: hidden;
         border: 1px solid #1A3C8A;
@@ -1070,6 +1070,18 @@ a {
                 height: 100%;
                 width: 100%;
             }
+.hotel-mgt {
+    background-image: url('../img/hotel.png');
+}
+.e-mgt {
+    background-image: url('../img/gallery2.jpg');
+}
+.cat-service {  
+    background-image: url('../img/gallery1.jpg');
+}
+.rentals-page {
+    background-image: url('../img/deco2.jpg');
+}
 
 @media screen and (max-width:1024px) {
     .lp-service {
@@ -1361,11 +1373,25 @@ a {
         right: -40px;
     } */
     .course-outline {
-        padding-left: 10px;
+        padding-left: 0;
     }
         .course-outline li {
-            list-style-type: circle;
-            padding: 5px 0 5px 5px;
+            list-style-type: none;
+            padding: 0;
+            line-height: 1.5rem;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .course-outline li:before {
+            font-size: 2em;
+            border-radius: 50%;
+            color: #1A3C8A;
+            content: "\2022";
+            display: inline-block;
+            margin-left: -.5em;
+            margin-right: .5em;
         }
     .details-table div {
         display: flex;
@@ -1388,11 +1414,12 @@ a {
         margin: 0;
     }
     .f-height {
-        width: 100%;
+        width: 70%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start !important;
         justify-content: center;
+        text-align: left;
     }
 
 @media screen and (max-width:1024px) {
@@ -1409,11 +1436,10 @@ a {
         padding: 10px;
     }
     .details-table h3 {
-        font-size: 1rem;
+        font-size: .9rem;
         width: 40%;
     }
     .details-table p {
-        width: 60%;
         padding: 5px 0 5px 10px;
     }
 }
