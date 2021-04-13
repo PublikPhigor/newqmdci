@@ -334,7 +334,7 @@ a {
             height: 100%;
             top: 0;
             left: 0;
-            background: rgba(0,0,0,.7);
+            background: rgba(0,0,0,.3);
         }
         .hero-content {
             width: 90%;
@@ -347,7 +347,7 @@ a {
             .hero-content h1 {
                 color: #fff;
                 font-family: 'Manrope Bold';
-                font-size: 3rem;
+                font-size: 2.5rem;
                 margin-bottom: 10px;
             }
             .hero-btns {
@@ -405,6 +405,78 @@ a {
             font-size: .9rem;
         }
     }    
+
+/*  ==== COUNTDOWN ==== */
+.counter-cont {
+    width: 40%;
+}
+    .timer {
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        background: #E8F4FD;
+        border-radius: 50%;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+    }
+    .timer div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .timer span {
+        line-height: 1;
+    }
+    .timer-label {
+        font-size: .8rem;
+        font-weight: 600;
+    }
+    .timer-time {
+        color: #c10715;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    .enrol-btn {
+        background: #0066b3;
+        color: #fff !important;
+        text-decoration: none;
+        padding: 5px 20px;
+        transition: .4s;
+    }
+        .enrol-btn:hover {
+            font-weight: 300 !important;
+            letter-spacing: 1px;
+            transition: .4s;
+        }
+
+@media screen and (max-width:1024px) {
+    .countdown {
+        flex-direction: column;
+    }
+        .timer {
+            height: 60px;
+            width: 60px;
+        }
+            .timer-time {
+                font-size: .9rem;
+            }
+            .timer span {
+                font-size: .7rem;
+            }
+        .enrol-btn {
+            margin-top: 10px;
+        }
+        .counter-cont {
+            width: 90%;
+            margin: 0 auto;
+        }
+}
 
     /* Our vision */
     .vsn-card {
@@ -708,9 +780,9 @@ a {
             height: 350px;
             border-radius: 10px;
             position: relative;
+            overflow: hidden;
         }
             .abt-vsn-img img {
-                width: 100%;
                 height: 100%;
                 position: relative;
                 z-index: 8;
@@ -857,11 +929,23 @@ a {
     .courses {
         padding: 20px 10px;
     }
+    .course-card {
+        width: 300px;
+        margin: 0 auto 20px;
+        box-shadow: 2px 2px 2px 2px #f4f4f4;
+        position: relative;
+    }
+    .cc-content {
+        padding: 10px;
+    }
     .cc-content h3 {
-        font-size: .8rem;
+        font-size: 1.3rem;
     }
     .cc-btn {
+        position: relative;
         font-size: .8rem;
+        bottom: 10px;
+        left: 10px;
     }
     .cta {
         height: 150px;
@@ -1028,7 +1112,423 @@ a {
         grid-template-rows: 1fr 1fr 1fr;
     }
 }
-            
+
+/* ==== MEDIA PAGE ==== */
+.media-gallery {
+    width: 90%;
+    margin: 0 auto;
+    height: 450px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas: 
+                        "mg-box-1 mg-box-1 mg-box-1 mg-box-1"
+                        "mg-box-2 mg-box-3 mg-box-4 mg-box-5"
+    ;
+}
+.media-gallery div {
+    overflow: hidden;
+    border-radius: 10px;
+}
+    .media-gallery div img {
+        width: 100%;
+        height: 100%;
+    }
+    .mg-box-1 {
+        grid-area: mg-box-1;
+    }
+    .mg-box-2 {
+        grid-area: mg-box-2;
+    }
+    .mg-box-3 {
+        grid-area: mg-box-3;
+    }
+    .mg-box-4 {
+        grid-area: mg-box-4;
+    }
+    .mg-box-5 {
+        grid-area: mg-box-5;
+    }
+
+    .media-img {
+        overflow: hidden;
+        width: 250px;
+        height: 250px;
+        margin: 0 10px 10px 0;
+    }
+        .media-img img {
+            width: 100%;
+            height: 100%;
+        }
+    .load-more-btn {
+        padding: 5px 15px;
+        border: 2px solid #1A3C8A;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin: 10px auto;
+        color: #1A3C8A;
+        display: block;
+    }
+
+@media screen and (max-width:1024px) {
+    .media-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+                        "mg-box-1 mg-box-1"
+                        "mg-box-3 mg-box-5"
+    ;
+    }
+    .mg-box-2, .mg-box-4 {
+        display: none;
+    }
+}
+
+/* ==== ALUMNI PAGE ==== */
+.alumni-page {
+    background-image: url('../img/hero5.jpg');
+    background-position-y: -50px;
+}
+    .al-1h {
+        background: #fff;
+        width: 30%;
+        height: 300px;
+        max-width: 400px;
+        box-sizing: border-box;
+        position: relative;
+        margin-right: 2%;
+    }
+    .al-1h div{
+        padding: 30px;
+        width: 100%;
+        box-shadow: 2px 2px 2px 2px #f4f4f4, -2px -2px 2px 2px #f4f4f4;
+        position: relative;
+        z-index: 9;
+        background: #fff;
+        box-sizing: border-box;
+    }
+        .al-1h:before {
+            position: absolute;
+            top: calc(100% - 50px);
+            left: -50px;
+            height: 100px;
+            width: 100px;
+            background: #1A3C8A;
+            z-index: 1;
+            content: "";
+            border-radius: 50%;
+        }
+        .al-1h h3 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .al-1h p {
+            color: #707070;
+            margin-top: 20px;
+            line-height: 30px;
+            position: relative;
+            z-index: 9;
+        }
+    .al-2h {
+        width: 50%;
+        height: 300px;
+        overflow: hidden;
+    }
+        .al-2h img {
+            height: 100%;
+            width: 100%;
+        }
+
+.alumni-cards {
+    justify-content: center;
+    align-items: center;
+}
+    .alum-card {
+        width: 30%;
+        height: 350px;
+        overflow: hidden;
+        margin-right: 1%;
+        text-align: center;
+    }
+        .ac-img {
+            height: 250px;
+            width: 100%;
+        }
+            .ac-img img {
+                height: 100%;
+                width: 100%;
+            }
+        .alum-card h3 {
+            color: #1A3C8A;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 15px 0 0;
+        }
+        .alum-card p {
+            color: #707070;
+            font-weight: 600;
+        }
+@media screen and (max-width:1024px) {
+    .alumni-page {
+        height: 300px;
+        margin-top: 60px;
+        background-position-y: 0;
+    }
+        .al-1h, .al-2h {
+            position: relative;
+            z-index: 999;
+            width: 95%;
+            margin: 0 auto 50px;
+        }
+        .alum-card {
+            width: 95%;
+            margin: 0 auto 20px;
+        }      
+}
+
+/* ==== course details ==== */
+.cd-btn {
+    cursor: pointer;
+    color: #1A3C8A;
+}
+.cd-1h {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+    .cd-1h .cd-title {
+        font-size: 2rem;
+    }
+        .cd-1h img {
+            width: 100%;
+            height: 300px;
+
+        }
+    .cd-1h .rating {
+        margin: 5px 0 0;
+    }
+        .cd-1h .rating i {
+            color: #1A3C8A;
+        }
+    .cd-1h .price, .cd-1h .duration {
+        color: #656366;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 10px 0 0;
+    }
+    .cd-1h .price {
+        font-size: 1.5rem;
+    }
+.co-1h h3, .co-2h h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.co-1h div {
+    box-shadow: 1px 1px 3px 3px #f4f4f4, -1px -1px 3px 3px #f4f4f4;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 400px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 8;
+}
+.details-table {
+    box-shadow: 1px 1px 3px 3px #f4f4f4, -1px -1px 3px 3px #f4f4f4;
+    margin: 20px auto;
+    background: #fff;
+    z-index: 8;
+}
+    /* .co-1h div:after, .details-table:after {
+        position: absolute;
+        background: #1A3C8A;
+        height: 80px;
+        width: 80px;
+        content: "";
+        border-radius: 50%;
+        z-index: 1;
+        display: block;
+        top: calc(100% - 40px);
+    }
+    .co-1h div:after {
+        left: -40px;
+    }
+    .details-table:after {
+        right: -40px;
+    } */
+    .course-outline {
+        padding-left: 10px;
+    }
+        .course-outline li {
+            list-style-type: circle;
+            padding: 5px 0 5px 5px;
+        }
+    .details-table div {
+        display: flex;
+        align-items: center;
+        height: auto;
+        min-height: 60px;
+        box-sizing: border-box;
+    }
+    .details-table h3 {
+        padding: 0 10px;
+        width: 30%;
+        margin-right: 20px;
+        height: 100%;
+        color: #1A3C8A;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    .details-table p {
+        padding: 5px 0 5px 10px;
+        margin: 0;
+    }
+    .f-height {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+@media screen and (max-width:1024px) {
+    .cd-1h .cd-title {
+        font-size: 1.5rem;
+    }
+    .cd-1h img {
+        height: 250px;
+    }
+    .co-1h div {
+        width: 95%;
+        margin: 10px auto 20px;
+        overflow: hidden;
+        padding: 10px;
+    }
+    .details-table h3 {
+        font-size: 1rem;
+        width: 40%;
+    }
+    .details-table p {
+        width: 60%;
+        padding: 5px 0 5px 10px;
+    }
+}
+
+/* ==== register page ==== */
+.r-cont {
+    width: 550px;
+    max-height: auto;
+    border: 1px solid #ccc;
+    margin: 150px auto 0;
+    position: relative;
+}
+.r-cont-2 {
+    height: 350px;
+}
+.r-cont-3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    .r-cont-3 h3 {
+        font-size: 3rem;
+    }
+    .r-close-btn {
+        cursor: pointer;
+        color: #000;
+        background: #fda4aa;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .r-form {
+        width: 100%;
+    }
+        .r-form input{
+            border: none;
+            padding: 10px 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+            .r-cont .proceed {
+                width: 150px;
+            }
+            .f-split input {
+                width: 45%;
+            }
+            .info {
+                font-size: .8rem;
+                display: block;
+                margin-bottom: 20px;
+            }
+        .r-form select {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background: none;
+            padding: 10px 5px;
+        }
+    .rc-mini {
+        width: 100%;
+        margin: 10px 0;
+    }
+        .rm-1 {
+            width: 70%;
+        }
+        .rn {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 5px;
+            width: 20%;
+        }
+        .rn2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .dp {
+            height: 100px;
+            width: 100px;
+            box-sizing: border-box;
+        }
+            .dp img {
+                height: 100%;
+                width: 100%;
+            }
+
+@media screen and (max-width:1024px) {
+    .r-cont {
+        width: 95%;
+        padding: 20px !important;
+        height: 90%;
+    }
+    .r-cont-2 {
+        height: 500px;
+    }
+    .r-cont-3 {
+        width: 95%;
+        box-sizing: border-box;
+    }
+    .r-cont-3 h3 {
+        font-size: 2rem;
+    }
+    .rc-mini .d-flex {
+        flex-direction: column  ;
+    }
+}
+
 /* ==== MY FOOTER ==== */
 footer {
     background-color: #fafafa;
