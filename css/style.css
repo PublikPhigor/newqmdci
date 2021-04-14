@@ -1631,6 +1631,168 @@ a {
     }
 }
 
+/* ==== BLOG PAGE ==== */
+.blog-title {
+    font-size: 2rem;
+} 
+
+.blog-content {
+    padding: 20px;
+}
+
+.comment-cont {
+    background: #F1F9FF;
+    box-sizing: border-box;
+    height: 500px;
+    overflow: hidden;
+    padding: 50px;
+}
+    .enter-comment {
+        margin-bottom: 10px;
+    }
+        .c-h {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+            .c-h p {
+                margin: 0;
+                font-size: .6rem;
+                color: #000;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .c-h div {
+                display: flex;
+            }
+        #comment {
+            width: 100%;
+            height: 100px;
+            padding: 20px 10px;
+            box-sizing: border-box;
+            background: #fff;
+        }
+    .prev-comments {
+        height: 250px;
+        overflow-y: scroll;
+    }
+        .pc-card {
+            height: 120px;
+            width: 100%;
+            background: #fff;
+            display: flex;
+            overflow: hidden;
+        }
+            .pc-1h {
+                width: 10%;
+                padding: 10px 0 0 10px;
+            }
+            .pc-2h {
+                width: 90%;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .pc-card i {
+                color: #fff;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 50%;
+                width: 30px;
+                font-size: .8rem;
+                text-align: center;
+                background: #1A3C8A;
+                margin-right: 20px;
+            }
+            .pcc-title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+                .pcc-title h3 {
+                    font-size: 1rem;
+                    margin: 0;
+                    margin-right: 10px;
+                    font-weight: 600;
+                }
+                .pcc-title .time {
+                    font-size: .8rem;
+                }
+            .pc-2h p {
+                font-size: .8rem;
+                margin: 0;
+            }
+    .rp-slide {
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        height: 300px;
+        display: flex;
+    }
+        .rp-card {
+            height: 280px;
+            min-width: 280px;
+            width: 280px;
+            position: relative;
+            margin-right: 20px;
+            display: block;
+        }
+            .rp-card img {
+                height: 100%;
+                width: 100%;
+            }
+        .rp-details {
+            width: 90%;
+            position: absolute;
+            color: #fff;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+        }
+            .rp-details h3 {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            .rp-details p {
+                margin: 10px 0 0;
+                font-size: .7rem;
+            }
+        .rp-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, #FFFFFF08 50%, #1A3C8A);
+            z-index: 8;
+        }
+
+@media screen and (max-width:1024px) {
+    .blog-title {
+        font-size: 1.8rem;
+    }
+    .comment-cont {
+        padding: 20px 10px;
+    }
+    .pc-card i {
+        font-size: .7rem;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+    }
+    .pcc-title h3 {
+        font-size: .7rem;
+        text-transform: uppercase;
+    }
+    .pcc-title span {
+        color: #656366;
+        font-size: .5rem !important;
+        text-transform: uppercase;
+    }
+}
+
 /* ==== MY FOOTER ==== */
 footer {
     background-color: #fafafa;
