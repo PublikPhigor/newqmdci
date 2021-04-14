@@ -1123,6 +1123,11 @@ a {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
+    .hotel-mgt, .e-mgt, .cat-service, .rentals-page {        
+        margin-top: 50px;
+        height: 300px;
+        background-position-y: 0;
+    }
 }
 
 /* ==== MEDIA PAGE ==== */
@@ -1169,7 +1174,7 @@ a {
         overflow: hidden;
         width: 250px;
         height: 250px;
-        margin: 0 10px 10px 0;
+        margin: 0 20px 40px 0;
     }
         .media-img img {
             width: 100%;
@@ -1552,6 +1557,77 @@ a {
     }
     .rc-mini .d-flex {
         flex-direction: column  ;
+    }
+}
+
+/* ==== CONTACT PAGE ==== */
+.contact-hero {
+    height: 200px;
+    margin-top: 100px;
+    background: #E5F1FA;
+    position: relative;
+}
+    .contact-hero .container {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+        .contact-hero h1 {
+            font-size: 3rem;
+        }
+.map {
+    height: 300px;
+}
+    .map h3 {
+        font-size: 2.5rem;
+    }
+    .map p, .map a{
+        color: #1A3C8A;
+        font-weight: 500;
+    }
+    .addy {
+        margin-top: 30px;
+    }
+        .addy p {
+            display: flex;
+            align-items: center;
+        }
+        .addy i {
+            margin-right: 20px;
+            color: #000;
+            background: #F4EFEF;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+        }
+    .map iframe {
+        height: 100%;
+        width: 100%;
+    }
+
+@media screen and (max-width:1024px) {
+    .contact-hero {
+        margin-top: 65px;
+    }
+        .contact-hero h1 {
+            font-size: 2.5rem;
+        }
+    .map h3 {
+        font-size: 1.5rem;
+    }
+    .map p {
+        font-size: .8rem;
+    }
+    .map i {
+        font-size: .7rem;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        margin-right: 10px;
     }
 }
 
