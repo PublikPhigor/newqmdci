@@ -94,6 +94,9 @@ a {
     color: #fff;
     transition: 0.4s ease;
 }
+.text-red {
+    color: #c10715;
+}
 
 .sh-1 {
     font-size: 3rem;
@@ -1049,14 +1052,26 @@ a {
                 outline: none;
                 box-sizing: border-box;
             }
-            .event-form input:first-child {
-                width: 80%;
-                background: #fff;
-            }
-            .event-form input:last-child {
-                width: 20%;
+            .esp-btn {
+                display: block;
+                margin: 10px auto;
+                width: 200px;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                box-sizing: border-box;
                 background: #1A3C8A;
-            }
+                text-align: center;
+                font-weight: 600;
+                transition: 0.5s;
+            }   
+                .esp-btn:hover {
+                    color: #fff;
+                    letter-spacing: .5px;
+                }
+                .esp-btn.whatsapp-btn {
+                    display: none;
+                }
         .project-gallery {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -1070,6 +1085,43 @@ a {
                 height: 100%;
                 width: 100%;
             }
+
+         /* click to expand images */
+        .pg-img.expand {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 95%;
+            max-width: 750px;
+            height: 400px;
+            transform: translate(-50%, -50%);
+            transition: 0.3s ease;
+            z-index: 99;
+        }
+        #g-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.7);
+            transform: scale(0);
+            transition: 0.3s ease;
+            z-index: 98;
+            cursor: pointer;
+        }
+            #g-overlay.expand {
+                transform: scale(1);
+            }
+            #g-overlay span {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #fff;
+            }
+
+/* each services image */
 .hotel-mgt {
     background-image: url('../img/hotel.png');
 }
@@ -1110,13 +1162,11 @@ a {
         width: 95%;
         overflow: hidden;
     }
-    .event-form div {
-        margin: 0;
+    .esp-btn {
+        display: none;
     }
-    .event-form input {
-        width: 100% !important;
-        box-sizing: border-box;
-        margin: 5px 0;
+    .esp-btn.whatsapp-btn {
+        display: block;
     }
     .project-gallery {
         height: 400px;

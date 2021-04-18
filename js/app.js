@@ -9,6 +9,23 @@ burger.onclick = ()=>{
     burger.querySelector('i').classList.toggle('fa-times');
 };
 
+//gallery
+
+let teamImages = document.querySelectorAll('#project-gallery div');
+const gOverlay = document.querySelector('#g-overlay');
+teamImages.forEach(image =>{
+    image.addEventListener('click', e =>{
+        let expanded = e.target;
+        expanded.closest('.pg-img').classList.add('expand');
+        gOverlay.classList.add('expand');
+        console.log(expanded);
+        
+        gOverlay.onclick = ()=>{
+            expanded.closest('.pg-img').classList.remove('expand');
+            gOverlay.classList.remove('expand');
+        }
+    }) 
+});
 
 
 const counterDiv = document.querySelector('#counter');
@@ -81,3 +98,4 @@ const x = setInterval(() => {
     document.querySelector('#second').innerHTML = seconds;
 
 }, 1000);
+
