@@ -46,7 +46,7 @@ const slideObserver = new IntersectionObserver((entries, slideObserver) => {
                 } else {
                     output1+=10;
                 }
-            }, 10);
+            }, 100);
 
             const recommendedTimer = setInterval(() => {
                 document.querySelector('#recommended').textContent = `${output2}+`;
@@ -82,7 +82,7 @@ slideObserver.observe(counterDiv);
 
 
 //countdown 
-let countdownDate = new Date("May 30, 2021 17:00:00").getTime();
+let countdownDate = new Date("May 7, 2021 17:00:00").getTime();
 const x = setInterval(() => {
     let now = new Date().getTime();
     let distance = countdownDate - now;

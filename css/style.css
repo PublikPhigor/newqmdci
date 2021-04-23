@@ -201,6 +201,7 @@ a {
             align-items: center;
             width: 90%;
             margin: 0 auto;
+            padding: 10px 0;
         }
             #logo {
                 width: 200px;
@@ -285,7 +286,7 @@ a {
             transition: .5s ease;
         }
             .mobile-navbar.active {
-                height: 50vh;
+                height: auto;
                 padding: 5%;
             }
             .mobile-navbar ul li {
@@ -380,16 +381,16 @@ a {
             background-position: center;
         }
         .slide-1 {
-            background-image: url('../img/hero1.JPG');
+            background-image: url('../img/slider1.jpg');
         }
         .slide-2 {
-            background-image: url('../img/hero2.jpg');
+            background-image: url('../img/slider2.jpg');
         }
         .slide-3 {
-            background-image: url('../img/hero3.jpg');
+            background-image: url('../img/slider3.jpg');
         }
         .slide-4 {
-            background-image: url('../img/hero4.jpg');
+            background-image: url('../img/slider4.jpg');
         }
         .slide-5 {
             background-image: url('../img/hero5.jpg');
@@ -400,9 +401,12 @@ a {
             height: 300px;
             margin-top: 46px;
         }
-        .hero-content h1 {
-            font-size: 1.3rem;
+        .hero-slide div {
+            display: none;
         }
+        /* .hero-content h1 {
+            font-size: 1.3rem;
+        } */
         .hero-btn {
             padding: 5px 10px;
             font-size: .9rem;
@@ -490,18 +494,17 @@ a {
         padding: 10px;
         box-sizing: border-box;
         overflow: hidden;
-        border: 1px solid #1A3C8A;
-        background: #fff;
+        display: block;
     }
-        .vsn-card:hover {
-            border: 1px solid #E3061FFA;
-        }
         .vsn-card h3 {
             font-weight: 600;
             font-size: 1.3rem;
         }
         .vsn-card:hover h3 {
             color: #E3061FFA;
+        }
+        .vsn-card p, .vsn-card li {
+            color: #000;
         }
     
     .video {
@@ -530,7 +533,7 @@ a {
             font-family: 'Manrope Bold';
         }
         .team-card {
-            width: 300px;
+            width: 250px;
             margin: 0;
             overflow: hidden;
         }
@@ -602,9 +605,8 @@ a {
         }
         .all-test-cards {
             width: 90%;
-            margin: 0 auto;
+            margin: 20px auto 0;
             display: flex;
-            align-items: center;
             justify-content: space-between;
         }
             .test-card {
@@ -615,14 +617,14 @@ a {
                 display: flex;
                 align-items: center;
                 margin-bottom: 10px;
+                flex-direction: column;
+                justify-content: center;
             }
                 .ttc-img img {
-                    height: 100px;
-                    width: 100px;
-                    border: 1px solid #1A3C8A;
-                    border-radius: 50%;
+                    width: 90px;
+                    height: 30px;
                     display: block;
-                    margin-right: 30px;
+                    margin-bottom: 10px;
                     position: relative;
                 }
                     .ttc-img img::before {
@@ -783,10 +785,10 @@ a {
             height: 350px;
             border-radius: 10px;
             position: relative;
-            overflow: hidden;
         }
             .abt-vsn-img img {
                 height: 100%;
+                width: 100%;
                 position: relative;
                 z-index: 8;
                 border-radius: 10px;
@@ -842,7 +844,7 @@ a {
     }
         
         .cc-img {
-            height: 50%;
+            height: 200px;
             width: 100%;
         } 
             .cc-img img {
@@ -1686,16 +1688,19 @@ a {
     font-size: 2rem;
 } 
 
+
 .blog-content {
     padding: 20px;
 }
-
 .comment-cont {
     background: #F1F9FF;
     box-sizing: border-box;
     height: 500px;
     overflow: hidden;
     padding: 50px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
 }
     .enter-comment {
         margin-bottom: 10px;
